@@ -1,0 +1,29 @@
+<h1>Liked Users</h1>
+<div class="container">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>E-mail address</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let like of isliked" >
+      <td *ngIf="like.is_liked">{{like.name}}</td>
+      <td>{{like.surname}}</td>
+      <td>{{like.mail}}</td>
+
+      <td>
+        <a ><span (click)="likeUser(user)"><i class="fas fa-thumbs-up" style="cursor: pointer"></i></span></a>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--<div *ngFor="let like of isliked">-->
+  <!--<div *ngIf="like.is_liked">-->
+    <!--<p>{{like.name}}</p>-->
+  <!--</div>-->
+<!--</div>-->
